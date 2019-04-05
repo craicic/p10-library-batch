@@ -1,5 +1,7 @@
-package com.gg.proj;
+package com.gg.proj.tasklet;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.ExitStatus;
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.StepExecution;
@@ -9,9 +11,10 @@ import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.stereotype.Component;
 
-
 @Component
-public class UserItemReader implements Tasklet, StepExecutionListener {
+public class MailProcessor implements Tasklet, StepExecutionListener {
+
+    private static final Logger log = LoggerFactory.getLogger(MailProcessor.class);
 
     @Override
     public void beforeStep(StepExecution stepExecution) {

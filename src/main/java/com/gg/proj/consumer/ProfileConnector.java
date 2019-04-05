@@ -1,9 +1,8 @@
 package com.gg.proj.consumer;
 
-import com.gg.proj.consumer.wsdl.books.ListLateProfilesRequest;
-import com.gg.proj.consumer.wsdl.books.ListLateProfilesResponse;
-import com.gg.proj.consumer.wsdl.books.User;
-import com.gg.proj.consumer.wsdl.books.UserMin;
+import com.gg.proj.consumer.wsdl.profiles.ListLateProfilesRequest;
+import com.gg.proj.consumer.wsdl.profiles.ListLateProfilesResponse;
+import com.gg.proj.consumer.wsdl.profiles.UserMin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -12,7 +11,6 @@ import org.springframework.ws.soap.client.core.SoapActionCallback;
 
 import java.util.List;
 
-@Component
 public class ProfileConnector extends WebServiceGatewaySupport {
     private static final Logger log = LoggerFactory.getLogger(ProfileConnector.class);
 

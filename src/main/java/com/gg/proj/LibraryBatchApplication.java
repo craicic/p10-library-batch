@@ -5,9 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.gg.proj.config",
-                                "com.gg.proj.consumer",
-                                "com.gg.proj"})
+@ComponentScan(basePackages = {
+        "com.gg.proj.config",
+        "com.gg.proj.consumer",
+        "com.gg.proj.tasklet",
+        "com.gg.proj"})
 public class LibraryBatchApplication {
 
     public static void main(String[] args) {

@@ -1,8 +1,9 @@
 package com.gg.proj.config;
 
-import com.gg.proj.MailItemWriter;
-import com.gg.proj.UserItemReader;
-import com.gg.proj.UserMailProcessor;
+import com.gg.proj.consumer.ProfileConsumer;
+import com.gg.proj.tasklet.MailSender;
+import com.gg.proj.tasklet.ProfileReader;
+import com.gg.proj.tasklet.MailProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -22,19 +23,22 @@ public class BatchConfiguration {
     @Autowired
     public StepBuilderFactory steps;
 
+    @Autowired
+    public ProfileConsumer profileConsumer;
+
     @Bean
-    public UserItemReader reader() {
-        return new UserItemReader();
+    public ProfileReader reader() {
+        return new ProfileReader(profileConsumer);
     }
 
     @Bean
-    public UserMailProcessor processor() {
-        return new UserMailProcessor();
+    public MailProcessor processor() {
+        return new MailProcessor();
     }
 
     @Bean
-    public MailItemWriter sender() {
-        return new MailItemWriter();
+    public MailSender sender() {
+        return new MailSender();
     }
 
     @Bean
