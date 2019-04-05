@@ -68,7 +68,7 @@
                         </goals>
                         <configuration>
                             <schemaLanguage>WSDL</schemaLanguage>
-                            <generatePackage>com.gg.proj.consumer.wsdl.books</generatePackage>
+                            <generatePackage>com.gg.proj.consumer.wsdl.profiles</generatePackage>
                             <schemas>
                                 <schema>
                                     <url>http://localhost:8080/ws/profiles.wsdl</url>
