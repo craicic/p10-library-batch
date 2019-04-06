@@ -1,7 +1,6 @@
 package com.gg.proj.config;
 
 import com.gg.proj.consumer.ProfileConsumer;
-import com.gg.proj.tasklet.MailSender;
 import com.gg.proj.tasklet.ProfileReader;
 import com.gg.proj.tasklet.MailProcessor;
 import org.springframework.batch.core.Job;
@@ -37,11 +36,6 @@ public class BatchConfiguration {
     }
 
     @Bean
-    public MailSender sender() {
-        return new MailSender();
-    }
-
-    @Bean
     protected Step readItemsFromSoap() {
         return steps
                 .get("soapReader")
@@ -57,13 +51,6 @@ public class BatchConfiguration {
                 .build();
     }
 
-    @Bean
-    protected Step sendMails() {
-        return steps
-                .get("mailsSender")
-                .tasklet(sender())
-                .build();
-    }
 
     @Bean
     public Job job() {
@@ -71,7 +58,6 @@ public class BatchConfiguration {
                 .get("taskletsJob")
                 .start(readItemsFromSoap())
                 .next(processMessages())
-                .next(sendMails())
                 .build();
     }
 }

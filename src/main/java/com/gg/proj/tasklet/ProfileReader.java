@@ -37,7 +37,7 @@ public class ProfileReader implements Tasklet, StepExecutionListener {
     @Override
     public void beforeStep(StepExecution stepExecution) {
         users = new ArrayList<>();
-        log.debug("SOAP Profile Reader initialized.");
+        log.debug("============ SOAP Profile Reader initialized ============");
     }
 
     @Override
@@ -56,7 +56,7 @@ public class ProfileReader implements Tasklet, StepExecutionListener {
                 .getJobExecution()
                 .getExecutionContext()
                 .put("users", this.users);
-        log.debug("SOAP Profile Reader ended.");
+        log.debug("============ SOAP Profile Reader ended ============");
         return ExitStatus.COMPLETED;
     }
 }
