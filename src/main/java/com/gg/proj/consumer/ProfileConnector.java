@@ -16,7 +16,7 @@ public class ProfileConnector extends WebServiceGatewaySupport {
 
     private static final String SERVICE_LOCATION = "http://localhost:8080/ws/profiles";
 
-    public List<UserMin> listLateUser() {
+    List<UserMin> listLateUser() {
         ListLateProfilesRequest request = new ListLateProfilesRequest();
         log.info("Requesting profiles from user that are late ...");
 

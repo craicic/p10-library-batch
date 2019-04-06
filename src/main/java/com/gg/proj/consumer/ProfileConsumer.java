@@ -1,6 +1,5 @@
 package com.gg.proj.consumer;
 
-import com.gg.proj.consumer.wsdl.profiles.UserMin;
 import com.gg.proj.model.UserModel;
 import com.gg.proj.utils.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,4 +23,5 @@ public class ProfileConsumer {
     public List<UserModel> listLateUser() {
         return UserMapper.toUserModelList(profileConnector.listLateUser());
     }
+
 }

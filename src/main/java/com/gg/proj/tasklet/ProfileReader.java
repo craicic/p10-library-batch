@@ -14,6 +14,7 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -23,6 +24,7 @@ public class ProfileReader implements Tasklet, StepExecutionListener {
     private static final Logger log = LoggerFactory.getLogger(ProfileReader.class);
 
     private ProfileConsumer profileConsumer;
+    private List<UserModel> users;
 
     public ProfileReader() {
     }
@@ -34,20 +36,27 @@ public class ProfileReader implements Tasklet, StepExecutionListener {
 
     @Override
     public void beforeStep(StepExecution stepExecution) {
-
-    }
-
-    @Override
-    public ExitStatus afterStep(StepExecution stepExecution) {
-        return null;
+        users = new ArrayList<>();
+        log.debug("SOAP Profile Reader initialized.");
     }
 
     @Override
     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
-        List<UserModel> users = profileConsumer.listLateUser();
+        users.addAll(profileConsumer.listLateUser());
         for (UserModel u : users) {
             log.info(u.toString());
         }
-        return null;
+        return RepeatStatus.FINISHED;
+    }
+
+    @Override
+    public ExitStatus afterStep(StepExecution stepExecution) {
+
+        stepExecution
+                .getJobExecution()
+                .getExecutionContext()
+                .put("users", this.users);
+        log.debug("SOAP Profile Reader ended.");
+        return ExitStatus.COMPLETED;
     }
 }
