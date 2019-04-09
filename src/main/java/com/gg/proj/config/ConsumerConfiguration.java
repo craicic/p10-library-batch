@@ -29,7 +29,7 @@ public class ConsumerConfiguration {
 
     @Bean
     public ProfileConnector profileConnector(@Autowired Jaxb2Marshaller profileMarshaller) {
-        ProfileConnector client = new ProfileConnector();
+        ProfileConnector client = new ProfileConnector(consumerProperties);
         client.setDefaultUri(consumerProperties.getUri());
         client.setMarshaller(profileMarshaller);
         client.setUnmarshaller(profileMarshaller);
