@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.gg.proj.tasklet</OriginalElement>
+  <nodes>
+    <node x="20.0" y="209.0">com.gg.proj.tasklet.MailProcessor</node>
+    <node x="20.0" y="0.0">com.gg.proj.tasklet.ProfileReader</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.gg.proj.tasklet.MailProcessor" target="com.gg.proj.tasklet.MailProcessor">
+      <point x="0.0" y="46.5" />
+      <point x="189.5" y="322.0" />
+      <point x="0.0" y="322.0" />
+      <point x="0.0" y="255.5" />
+      <point x="-169.5" y="-0.0" />
+    </edge>
+    <edge source="com.gg.proj.tasklet.ProfileReader" target="com.gg.proj.tasklet.ProfileReader">
+      <point x="0.0" y="69.0" />
+      <point x="189.5" y="158.0" />
+      <point x="0.0" y="158.0" />
+      <point x="0.0" y="69.0" />
+      <point x="-169.5" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="169.5" y="205.0" />
+  <SelectedNodes>
+    <node>com.gg.proj.tasklet.MailProcessor</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

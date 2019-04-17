@@ -2,13 +2,16 @@
   
 ## Description  
   
-TODO
-  
+Batch's mission is to call the web service to get all users that have a 
+late loan, then send a reminder mail to all those users.
+
 ## Technologies  
   
 This application has been started via [Spring Initializr](https://start.spring.io/).  
   
-TODO
+To consume the WSDL it uses **JAX-B2 and Spring-WS** to connect the web service.
+**Spring Batch** is added to create Jobs (we use the Tasklet approach).
+Finally **Spring annotation processor** is included to manage custom properties in the application.properties.
 
 ## Execution
 
