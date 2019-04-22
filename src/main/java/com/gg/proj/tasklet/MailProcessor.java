@@ -17,6 +17,10 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ *
+ * A tasklet, it receives a list of user and send en Email to each one
+ */
 @Component
 public class MailProcessor implements Tasklet, StepExecutionListener {
 
@@ -27,6 +31,7 @@ public class MailProcessor implements Tasklet, StepExecutionListener {
 
     @Override
     public void beforeStep(StepExecution stepExecution) {
+        // We call the ExecutionContext to retrieve data from the previous tasklet
         ExecutionContext executionContext = stepExecution
                 .getJobExecution()
                 .getExecutionContext();

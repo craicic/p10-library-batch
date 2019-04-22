@@ -13,6 +13,10 @@ import org.springframework.ws.soap.client.core.SoapActionCallback;
 
 import java.util.List;
 
+/**
+ *
+ * Consumer connector's class
+ */
 public class ProfileConnector extends WebServiceGatewaySupport {
 
     private ConsumerProperties properties;
@@ -34,6 +38,13 @@ public class ProfileConnector extends WebServiceGatewaySupport {
 
     }
 
+    /**
+     *
+     * <p>Directly call the Web-service's method listAllProfiles() from the Profile service. It ask the WS to provide
+     * the list of all late users.</p>
+     *
+     * @return a list of UserMin (a DTO)
+     */
     List<UserMin> listLateUser() {
 
         ListLateProfilesRequest request = new ListLateProfilesRequest();

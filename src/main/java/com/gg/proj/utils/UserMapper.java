@@ -6,6 +6,10 @@ import com.gg.proj.model.UserModel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * A custom mapper to convert objects
+ */
 public class UserMapper {
 
     private static UserModel userMinToUserModel(UserMin user) {

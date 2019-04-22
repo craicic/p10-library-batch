@@ -7,6 +7,10 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ *
+ * Consumer class
+ */
 @Component
 public class ProfileConsumer {
 

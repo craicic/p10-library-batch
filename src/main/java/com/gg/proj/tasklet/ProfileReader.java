@@ -17,7 +17,11 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ *
+ * A tasklet, its role is to call the profile consumer, store the result into a list, and to pass this list to the next
+ * tasklet.
+ */
 @Component
 public class ProfileReader implements Tasklet, StepExecutionListener {
 
