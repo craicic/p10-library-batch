@@ -43,6 +43,7 @@ public class MailProcessor implements Tasklet, StepExecutionListener {
     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
         for (UserModel user : users) {
             customMailService.sendSimpleMail(user.getMailAdress(), user.getFirstName(), user.getLastName());
+            log.debug("Mail sent to a user");
         }
         return RepeatStatus.FINISHED;
     }

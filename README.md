@@ -1,4 +1,4 @@
-# Batch for the library project  
+# Batch for the [library project](https://github.com/xxjokerx/library)  
   
 ## Description  
   
@@ -20,18 +20,18 @@ Finally **Spring annotation processor** is included to manage custom properties 
 Create `src\main\resources\application.properties`. 
 
 Write the following properties to configure Spring Mail :\
-`spring.mail.host`
-`spring.mail.port`
-`spring.mail.username`
-`spring.mail.password`
-`spring.mail.properties.mail.smtp.auth=true`
-`spring.mail.properties.mail.smtp.starttls.enable=true`\
+`spring.mail.host`\
+`spring.mail.port`\
+`spring.mail.username`\
+`spring.mail.password`\
+`spring.mail.properties.mail.smtp.auth=true`\
+`spring.mail.properties.mail.smtp.starttls.enable=true`
  
- Then add the wsdl location `batch.webservice.uri`, depending the port you choose it should be `http://localhost:8080/{your-webservice-context-folder}/ws`
+ Then add the wsdl location `batch.webservice.uri`, depending the port you choose it should be `http://localhost:8080/{your-webservice-context-folder}/{webservice.location}`
  
 ##### 2 - Compile the application
 
-Using the command with parameter `mvn -Dwsdl.base.location=http://localhost:8080/{your-webservice-context-folder}/ws compile`
+Using the command with parameter `mvn -Dwsdl.base.location=http://localhost:8080/{your-webservice-context-folder}/{webservice.location} compile`
 
 ##### 3 - Run the app
 
