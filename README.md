@@ -1,4 +1,4 @@
-# Batch for the [library project](https://github.com/xxjokerx/library)  
+# Batch for the [library project](https://github.com/xxjokerx/p10-library)  
   
 ## Description  
   
