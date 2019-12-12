@@ -3,7 +3,7 @@
 ## Description  
   
 Batch's mission is to call the web service to get all users that have a 
-late loan, then send a reminder mail to all those users.
+late loan, then send a reminder mail to each of those users.
 
 ## Technologies  
   
@@ -36,3 +36,9 @@ Using the command with parameter `mvn -Dwsdl.base.location=http://localhost:8080
 ##### 3 - Run the app
 
 With your IDE or with this command line : `java -jar ./library-batch-0.0.1-SNAPSHOT.jar`
+
+## Release notes
+
+##### 1.0.0
+
+Send a reminder to each user that have a late loan.
