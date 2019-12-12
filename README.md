@@ -35,7 +35,7 @@ Using the command with parameter `mvn -Dwsdl.base.location=http://localhost:8080
 
 ##### 3 - Run the app
 
-With your IDE or with this command line : `java -jar ./library-batch-0.0.1-SNAPSHOT.jar`
+With your IDE or with this command line : `java -jar ./library-batch-1.0.0.jar`
 
 ## Release notes
 
