@@ -1,4 +1,4 @@
-# Batch for the [library project](https://github.com/xxjokerx/p10-library)  
+# Batch 1.1.0-ALPHA-1 for the [library project](https://github.com/xxjokerx/p10-library)  
   
 ## Description  
   
@@ -37,8 +37,14 @@ Using the command with parameter `mvn -Dwsdl.base.location=http://localhost:8080
 
 With your IDE or with this command line : `java -jar ./library-batch-1.0.0.jar`
 
-## Release notes
+## Changelog
 
-##### 1.0.0
+##### 1.0.0 - 11 Dec 2019
 
 Send a reminder to each user that have a late loan.
+
+## Upcoming Version
+
+##### 1.1.0
+
+Will provide an advanced booking system
